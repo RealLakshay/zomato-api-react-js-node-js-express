@@ -38,10 +38,9 @@ A complete restaurant management system with REST API backend and React frontend
 
 ## 📁 Project Structure
 
-\`\`\`
+```
 zomato-management-system/
 ├── backend/                 # REST API Server
-│   ├── scripts/            # Database setup scripts
 │   ├── server.js           # Main server file
 │   ├── package.json        # Backend dependencies
 │   └── .env               # Environment variables
@@ -53,8 +52,7 @@ zomato-management-system/
 │   ├── package.json       # Frontend dependencies
 │   └── vite.config.js     # Vite configuration
 └── package.json           # Root package.json with scripts
-\`\`\`
-
+```
 ## 🔧 Available Scripts
 
 ### Root Level Scripts
