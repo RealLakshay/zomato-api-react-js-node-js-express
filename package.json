@@ -1,0 +1,38 @@
+{
+  "name": "zomato-api-2",
+  "version": "1.0.0",
+  "description": "Complete Zomato Management System with REST API",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd frontend/react && npm run dev",
+    "backend": "cd backend && node server.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend/react && npm start",
+    "setup": "npm run setup:backend && npm run setup:frontend",
+    "setup:backend": "cd backend && npm install && node scripts/database-setup.js setup",
+    "setup:frontend": "cd frontend/react && npm install",
+    "test:api": "cd backend && node scripts/test-api.js",
+    "test:connection": "cd backend && node scripts/test-connection.js",
+    "build": "cd frontend/react && npm run build",
+    "install:all": "npm install && cd frontend/react && npm install && cd ../../backend && npm install",
+    "db:fix": "cd backend && node scripts/database-fix.js",
+    "db:check": "cd backend && node scripts/database-setup.js check",
+    "db:reset": "cd backend && node scripts/database-setup.js reset"
+  },
+  "keywords": ["zomato", "restaurant", "management", "food", "delivery", "rest-api"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "chalk": "^4.1.2",
+    "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mysql2": "^3.11.3",
+    "react-bootstrap": "^2.10.5",
+    "react-router-dom": "^6.27.0"
+  }
+}
